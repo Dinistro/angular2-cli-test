@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Todo} from './todo';
 import {TodoService} from './todo.service';
 
@@ -8,7 +8,7 @@ import {TodoService} from './todo.service';
   templateUrl: 'todo.component.html',
   providers: [TodoService]
 })
-export class TodoComponent {
+export class TodoComponent implements OnInit{
 
   newTodo: Todo = new Todo();
 
@@ -30,6 +30,21 @@ export class TodoComponent {
 
   get todos() {
     return this.todoService.getAllTodos();
+  }
+
+  ngOnInit() {
+    let tasks: string[] = [
+      'Variablen/Typen',
+      'Operatoren',
+      'if/else',
+      'Loops',
+      'Funktionen',
+      'Klassen/Objekte',
+      'Vererbung'
+    ];
+    tasks.forEach((task) => {
+      this.todoService.addTodo(new Todo({title: task}));
+    });
   }
 
 }
