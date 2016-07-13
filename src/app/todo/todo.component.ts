@@ -4,7 +4,7 @@ import {TodoService} from './todo.service';
 
 @Component({
   moduleId: module.id,
-  selector: 'todo',
+  selector: 'app-todo',
   templateUrl: 'todo.component.html',
   providers: [TodoService]
 })
