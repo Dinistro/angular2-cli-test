@@ -28,6 +28,7 @@ var barrels = [
     'app',
     'app/shared',
     'app/todo',
+    'app/birthday',
 ];
 var cliSystemConfigPackages = {};
 barrels.forEach(function (barrelName) {
