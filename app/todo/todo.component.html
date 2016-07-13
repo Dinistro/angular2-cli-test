@@ -1,7 +1,8 @@
 <section class="app">
   <header class="header">
-    <h1>Michelle</h1>
-    <input class="new-todo" placeholder="Was musst du noch lernen?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+    <h1>To Learn</h1>
+    <p class="tiny">teached by Dinistro</p>
+    <input class="new-todo" placeholder="Noch mehr" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
   </header>
   <section class="main" *ngIf="todos.length > 0">
     <ul class="todo-list">
